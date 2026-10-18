@@ -22,7 +22,7 @@ npm start
 
 The production-ready static website is generated in `out/`. A prebuilt copy is included in this ZIP. `npm start` serves that copy on http://127.0.0.1:3000. Set `PORT` to change the preview port. Open the website through a web server; opening HTML directly from Finder will not load absolute asset paths correctly.
 
-Deploy the contents of `out/` to a static host, keeping the directory structure intact. Each route has an `index.html`; configure your host to serve directory indexes and use `404.html` for missing pages. Source can also be deployed to any host supporting Next.js static exports. No environment variables or API keys are required. Webpack is selected explicitly for reliable builds across restricted desktop environments.
+Deploy the contents of `out/` to a static host, keeping the directory structure intact. Each route has an `index.html`; configure your host to serve directory indexes and use `404.html` for missing pages. The included `Dockerfile` builds the export and serves it with nginx on port 3000 for Kantage Deploy. No environment variables or API keys are required. Webpack is selected explicitly for reliable builds across restricted desktop environments.
 
 ## Pages and pathways
 
