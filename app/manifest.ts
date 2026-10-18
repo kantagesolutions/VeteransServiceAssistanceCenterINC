@@ -1,5 +1,7 @@
 import type { MetadataRoute } from 'next';
 
+export const dynamic = 'force-static';
+
 // File-based metadata: Next serves this at /manifest.webmanifest and links it
 // automatically, so no change to layout.tsx is needed.
 export default function manifest(): MetadataRoute.Manifest {
