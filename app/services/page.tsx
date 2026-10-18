@@ -1,3 +1,3 @@
-import {PageIntro,ServiceList,Assistance} from '@/components/Shared';
-export const metadata={title:'Services'};
-export default function Services(){return <><PageIntro title="How We Help"><p>Our goal is to identify needs, connect veterans and families with appropriate resource, and provide support when assistance is available.</p></PageIntro><section className="wrap section pt-0"><ServiceList/></section><div className="wrap service-photo"><img src="/assets/support.webp" alt="Service member pictured on the VSA website" width="1600" height="1064"/><blockquote>“Every veteran deserves to have their basic needs met with dignity and respect.”</blockquote></div><Assistance/></>}
+import {PageIntro,ServiceList} from '@/components/Shared';
+export const metadata={title:'Resource Center'};
+export default function Services(){return <><PageIntro title="Resource Center"><p>Explore the kinds of support available to veterans and families. Select a service to find related resources.</p></PageIntro><section className="wrap section pt-0"><ServiceList/></section><div className="wrap service-photo"><img src="/assets/support.webp" alt="Service member pictured on the VSA website" width="1600" height="1064"/><blockquote>“Every veteran deserves to have their basic needs met with dignity and respect.”</blockquote></div></>}
