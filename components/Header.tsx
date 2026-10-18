@@ -1,0 +1,6 @@
+'use client';
+import Link from 'next/link';
+import {usePathname} from 'next/navigation';
+import {useState} from 'react';
+const links=[['Home','/'],['About','/about/'],['Services','/services/'],['Resource Center','/resource-center/'],['Get Involved','/get-involved/'],['Contact','/contact/']];
+export default function Header(){const path=usePathname();const [open,setOpen]=useState(false);return <header className="header"><div className="wrap header-inner"><Link href="/" className="brand" aria-label="VSA Home"><img src="/assets/vsa-approved-logo.png" alt="Veteran Service & Assistance, Inc. — VSA" width="1240" height="1268"/></Link><button className="menu-button" aria-expanded={open} aria-controls="main-nav" onClick={()=>setOpen(!open)}>{open?'Close':'Menu'}<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d={open?'M5 5l14 14M5 19 19 5':'M3 6h18M3 12h18M3 18h18'}/></svg></button><nav id="main-nav" className={open?'nav open':'nav'} aria-label="Main navigation">{links.map(([label,href])=><Link key={href} href={href} aria-current={path===href?'page':undefined} onClick={()=>setOpen(false)}>{label}</Link>)}<Link href="/contact/#assistance" className="button gold" onClick={()=>setOpen(false)}>Get Assistance</Link></nav></div></header>}
